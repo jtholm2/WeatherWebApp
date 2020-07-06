@@ -1,0 +1,11 @@
+{% if "temp" in primary_info_dictionary %}
+<h1> The weather results are below:</h1>
+<ul>
+	{%for key, value in primary_info_dictionary.items %}
+	<li>{{ key  }}: {{ value }}</li>
+	{% endfor %}
+</ul>
+
+{% else %}
+	<p>No data is available.</p>
+{% endif %}

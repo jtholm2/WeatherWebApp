@@ -1,0 +1,8 @@
+<h1>Welcome to JT's Weather App!</h1>
+
+<form action="{% url 'weather_by_zipcode' %}" method="post">
+	{% csrf_token %}
+	<label for="your_zipcode">Enter a 5 digit zipcode:</label><br>
+	<input type="text" id="your_zipcode" name="your_zipcode"><br>
+	<input type="submit" value="Enter">
+</form>
